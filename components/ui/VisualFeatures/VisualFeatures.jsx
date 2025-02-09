@@ -19,7 +19,7 @@ const VisualFeatures = () => {
     ]
     return (
         <SectionWrapper>
-            <div className="custom-screen text-gray-300">
+            <div className="custom-screen text-gray-300 mt-[5rem]">
                 <div className="max-w-xl mx-auto text-center">
                     <h2 className="text-gray-50 text-3xl font-semibold sm:text-4xl">
                         Take your email marketing to the next level with Mailgo

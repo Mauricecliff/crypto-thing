@@ -13,6 +13,9 @@ const Navbar = () => {
         { name: "Pricing", href: "/#pricing" },
         { name: "Testimonials", href: "/#testimonials" },
         { name: "FAQs", href: "/#faqs" },
+        { name: "Why Choose Us", href: "/#why-choose-us" },
+        { name: "How it Works", href: "/#how-it-works" },
+        { name: "Join Us", href: "/#join-us" },
     ]
 
     useEffect(() => {

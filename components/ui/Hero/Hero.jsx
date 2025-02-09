@@ -6,32 +6,25 @@ import LayoutEffect from '@/components/LayoutEffect';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+
 const heroContent = [
   {
-    heading:
-      'Join our crowd of Investors, Pool resources together and make steady profits',
-    subHeading: 'Invest in forex, crypto, stocks and indices',
-    action: 'Get Started',
-  },
-  {
-    heading: 'We manage the risk, you take profit.',
-    subHeading: 'No Sub Heading 2',
+    id: 2,
+    heading: 'Unite. Invest. Prosper',
+    subHeading: 'At PerityFx, we are revolutionizing the investment landscape by bringing together investors to leverage pooled resources for stable and profitable returns. ',
     action: 'Start Your Journey',
   },
   {
-    heading: 'Heading 3',
-    subHeading: 'No Sub Heading 3',
+    id: 3,
+    heading: 'Precision Trading with AI',
+    subHeading: 'Our cutting-edge platform utilizes advanced predictive AI to make accurate trading decisions and automatically execute profitable trades across diverse markets.',
     action: 'Enter Campaign',
   },
   {
-    heading: 'Heading 4',
-    subHeading: 'No Sub Heading 4',
+    id: 4,
+    heading: 'Join Us Today',
+    subHeading: 'Become a part of PerityFX and start your journey towards financial growth and stability. Sign up now and take the first step towards a smarter investment future.',
     action: 'Make Profit',
-  },
-  {
-    heading: 'Heading 5',
-    subHeading: 'No Sub Heading 5',
-    action: 'Join Now',
   },
 ];
 
@@ -53,10 +46,11 @@ const Hero = () => (
             showIndicators={false}
             showStatus={false}
             interval={3000}
+            showArrows={false}
           >
             {heroContent.map((content) => (
               <div
-                key={content.heading}
+                key={content.id}
                 className="space-y-5 max-w-3xl mx-auto text-center"
               >
                 <h1
@@ -71,7 +65,8 @@ const Hero = () => (
                 <p className="max-w-xl mx-auto text-gray-300">
                   {content.subHeading}
                 </p>
-                <div className="flex justify-center font-medium text-sm">
+               {content.id === 1 ? null : (
+                  <div className="flex justify-center font-medium text-sm">
                   <NavLink
                     href="/#pricing"
                     className="flex items-center text-white bg-purple-600 hover:bg-purple-500 active:bg-purple-700 "
@@ -91,10 +86,12 @@ const Hero = () => (
                     </svg>
                   </NavLink>
                 </div>
+               )}
+                
               </div>
             ))}
           </Carousel>
-          <GradientWrapper
+          {/* <GradientWrapper
             className="mt-16 sm:mt-28"
             wrapperClassName="max-w-3xl h-[250px] top-12 inset-0 sm:h-[300px] lg:h-[650px]"
           >
@@ -103,7 +100,7 @@ const Hero = () => (
               className="shadow-lg rounded-2xl"
               alt="Mailgo"
             />
-          </GradientWrapper>
+          </GradientWrapper> */}
         </div>
       </LayoutEffect>
     </div>

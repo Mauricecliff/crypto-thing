@@ -11,7 +11,7 @@ const LayoutEffect = ({ children,
 
     return cloneElement(children, {
         ref,
-        className: `${children.props.className || ""} ${className || ""} ${isInView ? trueState : falseState}`
+        className: `${children.props?.className || ""} ${className || ""} ${isInView ? trueState : falseState}`
     })
 }
 
